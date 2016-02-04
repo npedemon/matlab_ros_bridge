@@ -35,17 +35,17 @@ Finally we also need to compile everyting (boost, ros and our mex files) using a
 This section will guide you through the process of compiling the required version of boost with the compiler supported by your Matlab version. Before doing this you should try using one of the precompiled boost distributions available in the download section of this repository. Check the version correspondance table below in this page to find the correct download link.
 If you cannot find a precompiled boost download link for you setup then keep reading, otherwise skip to the following section.
 
-1. Download the correct version of boost from [here](http://www.boost.org/users/history/) in a folder of your choice (later referred to as <boost_dir>). To know which version you need you can type, in a matlab command window, the following command: 
+1. Download the correct version of boost from [here](http://www.boost.org/users/history/) in a folder of your choice (later referred to as "boost_dir"). To know which version you need you can type, in a matlab command window, the following command: 
 
     ```matlab
     ls([matlabroot '/bin/glnxa64/libboost_date_time*'])
     ```
-2. Open a new terminal and navigate to <boost_dir> and give the following command: 
+2. Open a new terminal and navigate to boost_dir and give the following command: 
 
     ```bash
     $ ./bootstrap.sh --prefix=path/to/boost/installation/prefix
     ```
-3. Edit the file <boost_dir>/project-config.jam with your favourite tool and substitute: 
+3. Edit the file boost_dir/project-config.jam with your favourite tool and substitute: 
 
     >using gcc;
     
